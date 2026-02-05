@@ -36,10 +36,12 @@ def mainmenu():
 # Defining the About function
 
 def about():
-    platformVersion = sys.platform()
+    platformVersion = sys.platform
+    print("")
     print("SatchelTwo CLI")
     print(buildVersion)
     print("Currently running on platform: ", platformVersion)
+    print("")
     mainmenu()
     
 #Checking for internet connectivity on startup
