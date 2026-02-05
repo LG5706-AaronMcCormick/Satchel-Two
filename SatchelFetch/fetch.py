@@ -2,6 +2,8 @@
 # A command line based tool for importing SatchelOne calendars into spreadsheets
 # ProjectSCR 2026
 
+#Lots of library setup
+
 from icalendar import Calendar
 import csv
 import urllib.request
@@ -14,12 +16,18 @@ import webbrowser
 import time
 import pandas as pd
 
+#Setting up an SSL HTTPS context so it doesn't throw security errors
+
 ssl._create_default_https_context = ssl._create_unverified_context
+
+#Variables for configuring directories
 
 downloadlocation = 0
 calendarlocation = 0
 downloadfolder = 0
 configlocation = 0
+
+#Checks for a config file to avoid the user always inputting a calendar api url
 
 def checkConfig():
     if os.path.exists(configlocation) == False:
@@ -40,6 +48,8 @@ def checkConfig():
         config.close()
         return satchellink
 
+#Setting directories for specific platforms (Linux and MacOS share the same file structure so they're grouped together)
+
 if sys.platform == "win32":
     os.system("mkdir %APPDATA%/Local/SatchelFetch/")
     os.system("mkdir %APPDATA%/Local/SatchelFetch/Download/")
@@ -55,16 +65,22 @@ elif sys.platform == "darwin" or "linux":
     downloadfolder = os.path.expanduser("~/Satchelfetch/Download/")
     configlocation = os.path.expanduser("~/Satchelfetch/config.txt")
 else:
-    raise Exception("Sorry, whatever obscure platform you're using is not supported!")
+    raise Exception("Sorry, whatever obscure platform you're using is not supported!") #Throwing an error for those who try running SatchelTwo on their... idk... Wii U?
+
+#Running the check config function to get the api url then downloading that
 
 satchellink = checkConfig()
 destination = downloadlocation
 print("Downloading ICAL")
 urllib.request.urlretrieve(satchellink, destination)
 
+#Preparing the ics to csv conversion
+
 filename = downloadlocation
 file_extension = str("ics")
 headers = ('Summary', 'UID', 'Description', 'Location', 'Start Time', 'End Time', 'URL')
+
+#Object oriented to make things cleaner down the line
 
 class CalendarEvent:
     """Calendar event class"""
@@ -81,6 +97,7 @@ class CalendarEvent:
 
 events = []
 
+# The big chunk of the script that reads the ical
 
 def open_cal():
     if os.path.isfile(filename):
@@ -119,6 +136,7 @@ def open_cal():
         print("Please enter an ics file located in the same folder as this script.")
         exit(0)
 
+# Writing the ical data to the CSV
 
 def csv_write(icsfile):
     csvfile = icsfile[:-3] + "csv"
@@ -133,21 +151,12 @@ def csv_write(icsfile):
         print("Could not open file! Please close Excel!")
         exit(0)
 
-
-def debug_event(class_name):
-    print("Contents of ", class_name.name, ":")
-    print(class_name.summary)
-    print(class_name.uid)
-    print(class_name.description)
-    print(class_name.location)
-    print(class_name.start)
-    print(class_name.end)
-    print(class_name.url, "\n")
-
-open_cal()
+open_cal() #Deprecated but runs anyways -\('_')/-
 sortedevents=sorted(events, key=lambda obj: obj.start)
 print("Writing CSV...")
 csv_write(filename)
+
+#Preparing to clean the CSV
 
 input_csv = calendarlocation
 output_csv = (downloadfolder + "/cleaned.csv")
@@ -166,6 +175,8 @@ new_columns = [
 
 for col in new_columns:
     df[col] = None
+
+# Parsing the whole thing to remove the leftover newlines from ical format
 
 def parse_description(desc):
     if pd.isna(desc):
@@ -192,12 +203,12 @@ def parse_description(desc):
 
     return cleaned
 
-# Apply parsing
+# Apply parsing so it looks nice and tidy
 df[new_columns] = df["Description"].apply(
     lambda x: pd.Series(parse_description(x))
 )
 
-# Optional: drop the original Description column
+# Dropping the original Description column
 df = df.drop(columns=["Description"])
 
 df.to_csv(output_csv, index=False)

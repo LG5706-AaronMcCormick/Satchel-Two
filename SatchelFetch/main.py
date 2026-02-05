@@ -2,8 +2,12 @@
 # Take control of your homework!
 # ProjectSCR 2026
 
+#Setting up libraries
+
 import subprocess
 import os
+
+#Defining main menu function
 
 def mainmenu():
     print("Main menu:")
@@ -18,16 +22,17 @@ def mainmenu():
     elif menuSelect == 1:
         os.system("python3 assignments.py")
     
+#Checking for internet connectivity on startup
 
 result = subprocess.run(
-    ["ping", "-c", "1", "8.8.8.8"] if subprocess.os.name != "nt" else ["ping", "-n", "1", "8.8.8.8"],
+    ["ping", "-c", "1", "8.8.8.8"] if subprocess.os.name != "nt" else ["ping", "-n", "1", "8.8.8.8"], #Pinging Google's DNS
     stdout=subprocess.DEVNULL,
     stderr=subprocess.DEVNULL
 )
 
-if result.returncode == 0:
+if result.returncode == 0: #If no packets return,
     print("")
 else:
-    raise Exception("EXCEPTION OCCURED: Connection failed! Please check your internet connectivity!")
+    raise Exception("EXCEPTION OCCURED: Connection failed! Please check your internet connectivity!") #Raise an exception
 
 mainmenu()
