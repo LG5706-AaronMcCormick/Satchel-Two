@@ -7,9 +7,7 @@ So yeah, this is the original Python scripts that do all the fancy stuff with co
 
 ### Requirements
 
-Electricity
-Python 3.9 or higher (I think)
-Copious ammounts of sanity
+Electricity, Python 3.9 or higher (I think) and Copious ammounts of sanity
 
 ### Is this still going to be updated along with the GUI version?
 
