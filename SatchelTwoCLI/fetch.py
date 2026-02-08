@@ -73,6 +73,7 @@ elif sys.platform == "darwin" or "linux":
     os.system("mkdir ~/SatchelTwo/Download/")
     downloadlocation = os.path.expanduser("~/SatchelTwo/Download/icalendars.ics")
     calendarlocation = os.path.expanduser("~/SatchelTwo/Download/icalendars.csv")
+    cleanedlocation = os.path.expanduser("~/SatchelTwo/Download/cleaned.csv")
     downloadfolder = os.path.expanduser("~/SatchelTwo/Download/")
     configlocation = os.path.expanduser("~/SatchelTwo/config.txt")
 else:
