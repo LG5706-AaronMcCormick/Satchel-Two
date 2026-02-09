@@ -11,7 +11,7 @@ from pathlib import Path
 
 #Variables
 
-buildVersion = "PRE-DVT Milestone 1"
+buildVersion = "Milestone 1.1"
 
 #Defining main menu function
 
@@ -20,10 +20,14 @@ def mainmenu():
     print("1. Assignments")
     print("2. Refresh Calendar / Setup Account")
     print("3. About")
-    print("4. Exit")
+    print("4. Token Setup (BETA)")
+    print("5. Exit")
     menuSelect = int(input("Please type the corresponding number for your option choice: "))
     if menuSelect == 4:
-        exit()
+        if sys.platform == "win32":
+            os.system("python tokensetup.py")
+        else:
+            os.system("python3 tokensetup.py")
     elif menuSelect == 2:
         if sys.platform == "win32":
             os.system("python fetch.py")
@@ -36,6 +40,8 @@ def mainmenu():
             os.system("python3 assignments.py")
     elif menuSelect == 3:
         about()
+    elif menuSelect == 5:
+        exit()
     else:
         print("That is not a valid option!")
         mainmenu()
