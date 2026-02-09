@@ -29,6 +29,7 @@ This came up to me as an idea for my A-Level Computer Science programming projec
 - webbrowser
 - time
 - pandas
+- requests
 - pathlib
 
 ### Installation
