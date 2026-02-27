@@ -1,4 +1,5 @@
-# SatchelTwo CLI
+<img width="256" height="80" alt="logo128x80cli" src="https://github.com/user-attachments/assets/72595464-ab6e-44e7-9e82-e36afacd57c0" />
+
 ## The bare minimum for checking your homework!
 
 ### So... What is this?
