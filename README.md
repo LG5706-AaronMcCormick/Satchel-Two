@@ -13,9 +13,9 @@ This came up to me as an idea for my A-Level Computer Science programming projec
 
 ### Requirements
 - Active SatchelOne account
-- Python 3.9 (Installed to PATH!)
-- Windows 10
-- MacOS 12
+- Python 3.8 (Installed to PATH!)
+- Windows 7 or newer
+- MacOS X 10.9 Mavericks or newer
 - An internet connection
 - Patience
 
