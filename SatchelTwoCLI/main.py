@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')  # Suppress all warnings
 
 #Variables
 
-buildVersion = "Milestone 1.3"
+buildVersion = "Release 1.0"
 
 #Defining main menu function
 

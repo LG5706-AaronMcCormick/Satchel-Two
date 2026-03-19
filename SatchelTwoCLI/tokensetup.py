@@ -85,7 +85,7 @@ if accepted == "N":
 
 if os.path.exists(tokenlocation) == False:
     print("Redirecting to token setup page...")
-    url = "https://github.com/LG5706-AaronMcCormick/SatchelTwo/blob/main/SatchelTwoCLI/TokenSetup.md"
+    url = "https://github.com/LG5706-AaronMcCormick/SatchelTwo/wiki/Token-Integration"
     time.sleep(3)
     webbrowser.open(url, new=0, autoraise=True)
 
@@ -115,8 +115,7 @@ headers = {
     "Sec-Fetch-Site": "same-site",
     "If-None-Match": 'W/"72d6b5ac5b8eec8c5f5ce2e0d1f5979a"',
     "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:147.0) "
-        "Gecko/20100101 Firefox/147.0"
+        "python-requests/2.32.5"
     ),
 }
 
