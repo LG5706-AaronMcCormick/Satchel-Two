@@ -3,18 +3,13 @@
 
 # Library setup 
 
-import urllib.request
-import shutil
 import sys
 import os
 import ssl
-from datetime import datetime, date
-import webbrowser
-import time
-import pandas as pd
 from pathlib import Path
 import requests
 import warnings
+import base64
 
 warnings.filterwarnings('ignore')  # Suppress all warnings
 
@@ -40,8 +35,8 @@ if sys.platform == "win32":
     configlocation = home / "Documents" / "SatchelTwo" / "config.txt"
     tokenlocation = home / "Documents" / "SatchelTwo" / "token.txt"
 elif sys.platform == "darwin" or sys.platform == "linux":
-    os.system("mkdir ~/SatchelTwo/")
-    os.system("mkdir ~/SatchelTwo/Download/")
+    os.system(r"mkdir ~/SatchelTwo/")
+    os.system(r"mkdir ~/SatchelTwo/Download/")
     downloadlocation = os.path.expanduser("~/SatchelTwo/Download/icalendars.ics")
     calendarlocation = os.path.expanduser("~/SatchelTwo/Download/icalendars.csv")
     cleanedlocation = os.path.expanduser("~/SatchelTwo/Download/cleaned.csv")
@@ -51,49 +46,14 @@ elif sys.platform == "darwin" or sys.platform == "linux":
 else:
     raise Exception("Sorry, whatever obscure platform you're using is not supported!") #Throwing an error for those who try running SatchelTwo on some random device.
 
-# Setting up a script to get and write the token to a text file
+# Using the base64 decode to get the UID from the token
 
-def checkToken():
-    if os.path.exists(tokenlocation) == False:
-        if sys.platform == "win32":
-            home = Path.home()
-            target_dir = home / "Documents" / "SatchelTwo"
-            target_dir.mkdir(parents=True, exist_ok=True)
-            file_path = target_dir / "token.txt"
-            file_path.write_text("")    
-        tokenfile = open(tokenlocation, "w")
-        tokenfile.write(input("Paste your Student Token here: "))
-        tokenfile.close()
-        tokenfile = open(tokenlocation, "r")
-        token = tokenfile.read()
-        tokenfile.close()
-        return token
-    else:
-        tokenfile = open(tokenlocation, "r")
-        token = tokenfile.read()
-        tokenfile.close()
-        return token
-
-# Displaying a warning before taking the user to the token setup page
-
-accepted = input("Warning! This is for only advanced users and enables experimental features, do you want to continue? Y/N: ")
-if accepted == "N":
-    if sys.platform == "win32":
-        os.system("python main.py")
-    else:
-        os.system("python3 main.py")
-
-if os.path.exists(tokenlocation) == False:
-    print("Redirecting to token setup page...")
-    url = "https://github.com/LG5706-AaronMcCormick/SatchelTwo/wiki/Token-Integration"
-    time.sleep(3)
-    webbrowser.open(url, new=0, autoraise=True)
-
-studenttoken = checkToken()
-
-# Getting the user to input their own Authentication key as that should be kept securely!
-
-auth = input("Please enter your authenication key (It should include an equals at the end!): ")
+printurl = input("Enter the URL you copied from the print homework button: ")
+auth = printurl[65:289]
+decoded = str(base64.b64decode(auth))
+studenttoken = decoded[10:18]
+expiry = decoded[46:55]
+print("")
 
 # Whole bunch of URL stuff to send for specific headers using the token and response
 
@@ -138,12 +98,14 @@ upi = data.get("user_private_infos", [{}])[0]
 
 email = upi.get("email")
 username = upi.get("username")
-uid = upi.get("uid")
 
-print("Your email must be", email, "...")
-print("And that means your username is", username, "...")
-print("So your UserID is", uid, "!")
-print("Token setup successful! Please make sure you save your authentication key!")
+print("Your email must be", email)
+print("And that means your username is", username)
+print("Your Student ID (UID) is : ", studenttoken)
+print("")
+print("Your Authentication Token is: ", auth)
+print("")
+print("Token setup successful! You will now be returned to the main menu.")
 
 if sys.platform == "win32":
     os.system("python main.py")

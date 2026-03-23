@@ -7,7 +7,6 @@
 from icalendar import Calendar
 import csv
 import urllib.request
-import shutil
 import sys
 import os
 import ssl
