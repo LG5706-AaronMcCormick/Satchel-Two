@@ -25,6 +25,6 @@ This is my own reimplementation of SatchelOne (Formerly ShowMyHomework) that sho
 ## But... Why though?
 This came up to me as an idea for my A-Level Computer Science programming project, which is part of my course. Usually you'd just make some boring crossy road clone or whatever else tickles your fancy. But I'm crazy! ... And so decided I'd fix my issue of getting homework handed in by making reworking SatchelOne my main project. Trust me, This isn't just a simple project. Even after A-Levels, I plan to continue development of the program to make something that can help others and not just fix my minor complaints.
 
-
-
+## License
+Check the license tab above.
 
