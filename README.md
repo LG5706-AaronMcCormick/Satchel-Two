@@ -5,15 +5,20 @@
 ## Making checking your homework... Slightly less infuriating!
 
 ### CLI Status: Release 1.1 
-### GUI Status: InDev
+### GUI Status: Closed Beta
 
-## Requirements
-- Active SatchelOne account
-- Python 3.8 (Installed to PATH!)
-- Windows 7 or newer
-- MacOS X 10.9 Mavericks or newer
-- An internet connection
-- Patience
+## Software requirements
+- An active Satchel:One account
+- Python 3.8 (Installed to PATH)
+- Windows 7 or higher
+- MacOS X Mavericks 10.9 or higher
+
+## Hardware requirements
+- Intel Pentium "Prescott" or newer
+- AMD Opteron 64 SledgeHammer or newer
+- 512MB RAM
+- 2GB Free Space
+- 1280 x 720 resolution or greater
 
 ## Running the program
 
