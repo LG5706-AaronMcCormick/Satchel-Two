@@ -1,6 +1,6 @@
 # The SatchelTwo Project
 
-<img width="128" height="80" alt="logo128x80white" src="https://github.com/user-attachments/assets/c5010b9e-68e8-4261-a5cb-708625339f81" />
+<img width="128" height="80" alt="logo128x80tp" src="https://github.com/user-attachments/assets/7beaef3f-7095-48b9-b962-fad406c9c304" />
 
 ## Making checking your homework... Slightly less infuriating!
 
