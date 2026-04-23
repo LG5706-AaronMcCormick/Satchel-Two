@@ -14,9 +14,9 @@
 - MacOS X Mavericks 10.9 or higher
 
 ## Hardware requirements
-- Intel Pentium "Prescott" or newer
-- AMD Opteron 64 SledgeHammer or newer
-- 512MB RAM
+- Intel Pentium "Prescott" or newer*
+- AMD Opteron 64 SledgeHammer or newer*
+- 512MB RAM**
 - 2GB Free Space
 - 1280 x 720 resolution or greater
 
@@ -33,3 +33,5 @@ This came up to me as an idea for my A-Level Computer Science programming projec
 ## License
 Check the license tab above.
 
+*In order to run on this old of a processor, numpy needs to be downgraded to a pre-1.24 release, such as 1.23.5. Doing otherwise will return "illegal instruction" errors.
+** Theoretically, this could go much lower, but there's a barrier where a linux kernel can't load anymore due to a lack of RAM.
