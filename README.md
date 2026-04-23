@@ -12,6 +12,7 @@
 - Python 3.8 (Installed to PATH)
 - Windows 7 or higher
 - MacOS X Mavericks 10.9 or higher
+- Linux of some kind
 
 ## Hardware requirements
 - Intel Pentium "Prescott" or newer*
