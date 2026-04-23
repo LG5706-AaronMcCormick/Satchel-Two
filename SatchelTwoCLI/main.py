@@ -1,4 +1,4 @@
-# SatchelTwo CLI Mainscript
+# Satchel:Two CLI Mainscript
 # Take control of your homework!
 # ProjectSCR 2026
 
@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')  # Suppress all warnings
 
 #Variables
 
-buildVersion = "Release 1.1"
+buildVersion = "Release 1.2"
 
 #Defining main menu function
 
@@ -47,7 +47,7 @@ def mainmenu():
     elif menuSelect == 6:
         exit()
     elif menuSelect == 5:
-        url = "https://github.com/LG5706-AaronMcCormick/SatchelTwo/discussions/"
+        url = "https://github.com/LG5706-AaronMcCormick/Satchel-Two/discussions/"
         webbrowser.open(url, new=0, autoraise=True)
     else:
         print("That is not a valid option!")
@@ -56,14 +56,14 @@ def mainmenu():
 # Defining the About function
 
 def about():
-    print(r"  _________       __         .__           ._____________              ")
-    print(r" /   _____/____ _/  |_  ____ |  |__   ____ |  \__    ___/_  _  ______  ")
-    print(r" \_____  \\__  \\   __\/ ___\|  |  \_/ __ \|  | |    |  \ \/ \/ /  _ \ ")
-    print(r" /        \/ __ \|  | \  \___|   Y  \  ___/|  |_|    |   \     (  <_> )")
-    print(r"/_______/ (____  /__|  \___  >___|  /\___  >____/____|    \/\_/ \____/ ")
+    print(r"  _________       __         .__           .__       ___________               _________ .____    .___ ")
+    print(r" /   _____/____ _/  |_  ____ |  |__   ____ |  |   /\ \__    ___/_  _  ______   \_   ___ \|    |   |   |")
+    print(r" \_____  \\__  \\   __\/ ___\|  |  \_/ __ \|  |   \/   |    |  \ \/ \/ /  _ \  /    \  \/|    |   |   |")
+    print(r" /        \/ __ \|  | \  \___|   Y  \  ___/|  |__ /\   |    |   \     (  <_> ) \     \___|    |___|   |")
+    print(r"/_______  (____  /__|  \___  >___|  /\___  >____/ \/   |____|    \/\_/ \____/   \______  /_______ \___|")
     platformVersion = sys.platform
     print("")
-    print("SatchelTwo CLI")
+    print("Satchel:Two CLI")
     print(buildVersion)
     print("Currently running on platform: ", platformVersion)
     print("")

@@ -1,4 +1,4 @@
-# SatchelTwo CLI Assignments
+# Satchel:Two CLI Assignments
 # A command line tool for viewing assignments!
 # ProjectSCR 2026
 

@@ -1,4 +1,4 @@
-# SatchelTwo CLI startup script
+# Satchel:Two CLI startup script
 # This serves two purposes: Look pretty and open the next script. I am lazy
 
 # Libraries
@@ -20,13 +20,13 @@ if result.returncode == 0: #If no packets return,
 else:
     raise Exception("EXCEPTION OCCURED: Connection failed! Please check your internet connectivity!") #Raise an exception
 
-print(r"  _________       __         .__           ._____________              ")
-print(r" /   _____/____ _/  |_  ____ |  |__   ____ |  \__    ___/_  _  ______  ")
-print(r" \_____  \\__  \\   __\/ ___\|  |  \_/ __ \|  | |    |  \ \/ \/ /  _ \ ")
-print(r" /        \/ __ \|  | \  \___|   Y  \  ___/|  |_|    |   \     (  <_> )")
-print(r"/_______/ (____  /__|  \___  >___|  /\___  >____/____|    \/\_/ \____/ ")
-print("")
-print("Welcome to SatchelTwo CLI!")
+print(r"  _________       __         .__           .__       ___________               _________ .____    .___ ")
+print(r" /   _____/____ _/  |_  ____ |  |__   ____ |  |   /\ \__    ___/_  _  ______   \_   ___ \|    |   |   |")
+print(r" \_____  \\__  \\   __\/ ___\|  |  \_/ __ \|  |   \/   |    |  \ \/ \/ /  _ \  /    \  \/|    |   |   |")
+print(r" /        \/ __ \|  | \  \___|   Y  \  ___/|  |__ /\   |    |   \     (  <_> ) \     \___|    |___|   |")
+print(r"/_______  (____  /__|  \___  >___|  /\___  >____/ \/   |____|    \/\_/ \____/   \______  /_______ \___|")
+print(" ")
+print("Welcome to Satchel:Two CLI!")
 
 if sys.platform == "win32":
     os.system("python main.py")

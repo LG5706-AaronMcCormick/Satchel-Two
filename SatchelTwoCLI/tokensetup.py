@@ -1,4 +1,4 @@
-# SatchelTwo CLI Token Setup
+# Satchel:Two CLI Token Setup
 # For advanced users only who want to test experimental features
 
 # Library setup 
@@ -98,12 +98,15 @@ upi = data.get("user_private_infos", [{}])[0]
 
 email = upi.get("email")
 username = upi.get("username")
+calendartoken = upi.get("calendar_token")
 
 print("Your email must be", email)
 print("And that means your username is", username)
 print("Your Student ID (UID) is : ", studenttoken)
 print("")
 print("Your Authentication Token is: ", auth)
+print("")
+print("Your Calendar token is:", calendartoken)
 print("")
 print("Token setup successful! You will now be returned to the main menu.")
 

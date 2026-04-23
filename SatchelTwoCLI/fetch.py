@@ -1,4 +1,4 @@
-# SatchelTwo CLI Fetcher
+# Satchel:Two CLI Fetcher
 # A command line based tool for importing SatchelOne calendars into spreadsheets
 # ProjectSCR 2026
 
