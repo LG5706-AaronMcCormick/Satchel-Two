@@ -5,7 +5,7 @@
 ## Making checking your homework... Slightly less infuriating!
 
 ### CLI Status: Release 1.2
-### GUI Status: Closed Beta
+### GUI Status: Release Candidate 1 Now out!
 
 ## Software requirements
 - An active Satchel:One account
@@ -30,6 +30,12 @@ This is my own reimplementation of Satchel:One (Formerly ShowMyHomework) that sh
 
 ## But... Why though?
 This came up to me as an idea for my A-Level Computer Science programming project, which is part of my course. Usually you'd just make some boring crossy road clone or whatever else tickles your fancy. But I'm crazy! ... And so decided I'd fix my issue of getting homework handed in by making reworking Satchel:One my main project. Trust me, This isn't just a simple project. Even after A-Levels, I plan to continue development of the program to make something that can help others and not just fix my minor complaints.
+
+## Credits
+- Myself for almost everything
+- Roshan Paswan for tkPDFViewer 1
+- Jeremy Jacobson for tkPDFViewer 2
+- Team:Satchel for their awesome API!
 
 ## License
 Check the license tab above.
