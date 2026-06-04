@@ -4,7 +4,7 @@
 
 ## Making checking your homework... Slightly less infuriating!
 
-### CLI Status: Release 1.2
+### CLI Status: Release 1.3
 ### GUI Status: Release Candidate 1 Now out!
 
 ## Software requirements
