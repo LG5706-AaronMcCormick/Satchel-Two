@@ -36,6 +36,9 @@ This came up to me as an idea for my A-Level Computer Science programming projec
 - Roshan Paswan for tkPDFViewer 1
 - Jeremy Jacobson for tkPDFViewer 2
 - Tom Schimansky for the far-superior Custom TKinter!
+- Apple for their SF Pro fonts!
+- WhiteBox for their Packages app for Mac!
+- NullSoft for their amazing installer!
 - Team:Satchel for their awesome API!
 
 ## License
