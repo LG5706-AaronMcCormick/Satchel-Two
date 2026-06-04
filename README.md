@@ -23,7 +23,7 @@
 
 ## Running the program
 
-Consult the wiki: [https://github.com/eXPerience2001/SatchelTwo/wiki]
+Consult the wiki: [https://github.com/THATeXPerience2001/SatchelTwo/wiki]
 
 ## What is this?
 This is my own reimplementation of Satchel:One (Formerly ShowMyHomework) that should actually function using the immense power of API TOKENS and iCalendars. This is designed to completely overhaul the borderline useless UI of Satchel:One that is so outdated that it can still function on Windows 2000. Not to mention the fact that in it's current state, it is utterly broken with random HTML formatting errors, ridiculously out of range date and times and a whole bunch of silly stuff that makes it infuriating and funny at the same time. 
