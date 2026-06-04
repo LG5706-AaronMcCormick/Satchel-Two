@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')  # Suppress all warnings
 
 #Variables
 
-buildVersion = "Release 1.2"
+buildVersion = "Release 1.3"
 
 #Defining main menu function
 
@@ -47,7 +47,7 @@ def mainmenu():
     elif menuSelect == 6:
         exit()
     elif menuSelect == 5:
-        url = "https://github.com/LG5706-AaronMcCormick/Satchel-Two/discussions/"
+        url = "https://github.com/THATeXPerience2001/Satchel-Two/discussions/"
         webbrowser.open(url, new=0, autoraise=True)
     else:
         print("That is not a valid option!")
